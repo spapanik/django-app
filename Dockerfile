@@ -1,4 +1,4 @@
-FROM spapanik/django-api:1.3.0
+FROM spapanik/django-api:1.4.0
 
 USER root
 
