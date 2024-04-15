@@ -1,12 +1,9 @@
-FROM spapanik/django-api:1.4.0
+FROM spapanik/django-api:2.0.0
 
 USER root
 
-RUN apt-get update -y && \
-    apt-get install -y \
-            gettext \
-            nodejs \
-            npm
+RUN dnf --assumeyes --nodocs --setopt install_weak_deps=False install gettext nodejs npm && \
+    dnf --assumeyes clean all
 
 USER ${DJANGO_USER}
 
