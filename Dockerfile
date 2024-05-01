@@ -7,6 +7,3 @@ RUN dnf makecache --refresh && \
     dnf --assumeyes clean all
 
 USER ${DJANGO_USER}
-
-RUN npm config set prefix '~/.local/' && \
-    npm install -g sass
